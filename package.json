@@ -10,13 +10,16 @@
       "**/react",
       "**/react-dom",
       "**/react-native",
-      "**/react-native/**"
+      "**/react-native/**",
+      "**/react-native-macos"
     ]
   },
   "scripts": {
     "reset": "find . -type dir -name node_modules | xargs rm -rf && rm -rf yarn.lock",
-    "mobile:start": "yarn workspace @my-app/mobile start",
+    "start:mobile": "yarn workspace @my-app/mobile start",
     "android": "yarn workspace @my-app/mobile android",
-    "ios": "yarn workspace @my-app/mobile ios"
+    "ios": "yarn workspace @my-app/mobile ios",
+    "start:macos": "yarn workspace @my-app/macos start",
+    "macos": "yarn workspace @my-app/macos macos"
   }
 }
