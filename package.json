@@ -4,14 +4,18 @@
   "private": true,
   "workspaces": {
     "packages": [
-      "packages/*"
+      "packages/app",
+      "packages/mobile",
+      "packages/macos",
+      "packages/web"
     ],
     "nohoist": [
       "**/react",
       "**/react-dom",
       "**/react-native",
       "**/react-native/**",
-      "**/react-native-macos"
+      "**/react-native-macos",
+      "**/react-native-web"
     ]
   },
   "scripts": {
@@ -20,6 +24,9 @@
     "android": "yarn workspace @my-app/mobile android",
     "ios": "yarn workspace @my-app/mobile ios",
     "start:macos": "yarn workspace @my-app/macos start",
-    "macos": "yarn workspace @my-app/macos macos"
+    "macos": "yarn workspace @my-app/macos macos",
+    "start:web": "yarn workspace @my-app/web start",
+    "web": "yarn workspace @my-app/web build"
+    
   }
 }
